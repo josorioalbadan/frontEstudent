@@ -1,8 +1,44 @@
+<h1>
+  Crear Estudiante
+</h1>
+<form (ngSubmit)="onSubmit()">
 <p>
-  <mat-form-field appearance="fill">
-    <mat-label>Fill form field</mat-label>
-    <input matInput placeholder="Placeholder">
+  <mat-form-field appearance="fill" >
+    <mat-label> Nombre del estudiante </mat-label>
+    <input matInput placeholder="Placeholder" [(ngModel)]="name" required>
     <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
-    <mat-hint>Hint</mat-hint>
+    <mat-hint>Ingrese Nombre del estudiante</mat-hint>
   </mat-form-field>
 </p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label> Edad  </mat-label>
+    <input matInput placeholder="Placeholder"  [(ngModel)]="age" required> 
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Ingrese Edad</mat-hint>
+  </mat-form-field>
+</p>
+<p>
+  <mat-form-field appearance="fill">
+    <mat-label>Documento </mat-label>
+    <input matInput placeholder="Placeholder"  [(ngModel)]="document" required>
+    <mat-icon matSuffix>sentiment_very_satisfied</mat-icon>
+    <mat-hint>Ingrese Documento del estudiante</mat-hint>
+  </mat-form-field>
+</p>
+
+<mat-form-field>
+  <mat-label>Select an option</mat-label>
+  <mat-select disableRipple  [(ngModel)]="licence" required>
+    <mat-option value="1">A1</mat-option>
+    <mat-option value="1">A2</mat-option>
+    <mat-option value="1">B1</mat-option>
+    <mat-option value="1">B2</mat-option>
+    <mat-option value="1">C1</mat-option>
+    <mat-option value="2">C2</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button type="submit">Crear</button>
+
+</form>
